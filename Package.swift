@@ -10,9 +10,6 @@
 import PackageDescription
 let package = Package(
   name: "RxCoreLocation",
-  platforms: [
-    .iOS(.v8), .tvOS(.v9)
-  ],
   products: [
     .library(name: "RxCoreLocation", targets: ["RxCoreLocation"])
   ],
