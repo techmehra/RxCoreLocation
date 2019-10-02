@@ -8,16 +8,21 @@
 //
 
 import PackageDescription
-
 let package = Package(
-    name: "RxCoreLocation",
-    products: [
-        .library(name: "RxCoreLocation", targets: ["RxCoreLocation"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "5.0.0")
-    ],
-    targets: [
-        .target(name: "RxCoreLocation", dependencies: ["RxSwift", "RxCocoa"], path: "Sources")
-    ]
+  name: "RxCoreLocation",
+  platforms: [
+    .iOS(.v8), .tvOS(.v9)
+  ],
+  products: [
+    .library(name: "RxCoreLocation", targets: ["RxCoreLocation"])
+  ],
+  dependencies: [
+    .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0"))
+  ],
+  targets: [
+    .target(name: "RxCoreLocation", dependencies: [ "RxSwift", "RxCocoa"]),
+    .testTarget(name: "RxCoreLocationTests", dependencies: ["RxCoreLocation"])
+  ],
+  swiftLanguageVersions: [.v5]
 )
+
