@@ -19,6 +19,6 @@ let package = Package(
   targets: [
     .target(name: "RxCoreLocation", dependencies: [ "RxSwift", "RxCocoa"]),
     .testTarget(name: "RxCoreLocationTests", dependencies: ["RxCoreLocation"])
-  ],
+  ]
 )
 
