@@ -20,6 +20,5 @@ let package = Package(
     .target(name: "RxCoreLocation", dependencies: [ "RxSwift", "RxCocoa"]),
     .testTarget(name: "RxCoreLocationTests", dependencies: ["RxCoreLocation"])
   ],
-  swiftLanguageVersions: [.v5]
 )
 
